@@ -10,6 +10,7 @@ test('Launch Browser and Navigate URL', async({page})=>{
     const url = await page.url()
     console.log("URL of Application :"+url);
 
-    
+    await expect(page).toHaveTitle('W3Schools Online Web Tutorials')
+    await expect(page).toHaveURL('https://www.w3schools.com/')
     
 })
